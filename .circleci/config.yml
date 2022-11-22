@@ -9,7 +9,7 @@ jobs:
     working_directory: ~/rails-docker-micanis61/src
     steps:
       - checkout:
-        path: ~/rails-docker-micanis61
+          path: ~/rails-docker-micanis61
       - ruby/install-deps
 
   test:
@@ -29,7 +29,7 @@ jobs:
     steps:
       - checkout:
           path: ~/rails-docker-micanis61
-      - ruby/install_deps
+      - ruby/install-deps
       - run:
           name: Database setup
           command: bundle exec rails db:migrate
